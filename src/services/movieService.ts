@@ -16,7 +16,7 @@ export async function fetchMovies(searchStr: string): Promise<Movie[]> {
         page: 1,
       },
       headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
+        Authorization: `Bearer ${import.meta.env.TMDB_API_KEY}`,
       },
     }
   );
