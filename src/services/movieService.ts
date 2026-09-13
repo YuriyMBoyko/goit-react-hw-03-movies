@@ -6,6 +6,8 @@ interface MoviesResponse {
 }
 
 export async function fetchMovies(searchStr: string): Promise<Movie[]> {
+  console.log(`Bearer ${import.meta.env.TMDB_API_KEY}`);
+  
   const response = await axios.get<MoviesResponse>(
     'https://api.themoviedb.org/3/search/movie',
     {
